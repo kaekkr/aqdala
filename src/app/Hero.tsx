@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Hero = () => {
 	return <div className='bg-white rounded-2xl flex justify-between items-center px-5 py-3'>
-		<div className="flex flex-col justify-between bg-[url('/home/lines.png')]">
+		<div className="flex flex-col justify-between bg-[url('/home/lines.png')] h-full">
 			<div className='space-y-5'>
 				<h1 className='max-w-xl'>Откройте для себя мир
 					<span className='text-orange-500'> свежего и качественного
