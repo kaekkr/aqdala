@@ -3,18 +3,18 @@ import type { Product } from '@/lib/types'
 import Image from 'next/image'
 import Link from 'next/link'
 
-// const getData = async () => {
-// 	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/products`)
-//
-// 	if (!res.ok) {
-// 		throw new Error('Error while getting list of products')
-// 	}
-//
-// 	return res.json()
-// }
+const getData = async () => {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/products`)
+	
+	if (!res.ok) {
+		throw new Error('Error while getting list of products')
+	}
+	
+	return res.json()
+}
 
 const Products = async () => {
-	// const products: Product[] = await getData()
+	const products: Product[] = await getData()
 	
 	return <div>
 		<p className='font-bold text-white text-9xl text-center'>Наши продукты</p>
@@ -35,10 +35,10 @@ const Products = async () => {
 				</Link>
 			</div>
 		</div>
-		{/* <div className='grid grid-rows-2 grid-cols-3 gap-y-5 mt-5'> */}
-		{/* 	{products.map((product) => <ProductCard key={product._id} name={product.name} description={product.description} */}
-		{/* 	                                        img={product.img} />)} */}
-		{/* </div> */}
+		<div className='grid grid-rows-2 grid-cols-3 gap-y-5 mt-5'>
+			{products.map((product) => <ProductCard key={product._id} name={product.name} description={product.description}
+			                                        img={product.img} />)}
+		</div>
 	</div>
 }
 

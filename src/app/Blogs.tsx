@@ -3,18 +3,18 @@ import type { Blog } from '@/lib/types'
 import Image from 'next/image'
 import Link from 'next/link'
 
-// const getData = async () => {
-// // 	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/blogs`)
-// //
-// // 	if (!res.ok) {
-// // 		throw new Error('Error while getting list of blogs')
-// // 	}
-// //
-// // 	return res.json()
-// // }
+const getData = async () => {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/blogs`)
+	
+	if (!res.ok) {
+		throw new Error('Error while getting list of blogs')
+	}
+	
+	return res.json()
+}
 
 const Blogs = async () => {
-	// const blogs: Blog[] = await getData()
+	const blogs: Blog[] = await getData()
 	
 	return <div className='space-y-5'>
 		<div className='space-y-5 text-center'>
@@ -33,10 +33,10 @@ const Blogs = async () => {
 				<Image src='/home/arrow-in-circle-orange.svg' alt='arrow in circle orange' width={32} height={32} />
 			</Link>
 		</div>
-		{/* <div className='flex justify-center space-x-5'> */}
-		{/* 	{blogs.map((blog) => <BlogCard key={blog._id} title={blog.title} description={blog.description} */}
-		{/* 	                               img={blog.img} slug={blog.slug} />)} */}
-		{/* </div> */}
+		<div className='flex justify-center space-x-5'>
+			{blogs.map((blog) => <BlogCard key={blog._id} title={blog.title} description={blog.description}
+			                               img={blog.img} slug={blog.slug} />)}
+		</div>
 	</div>
 }
 
