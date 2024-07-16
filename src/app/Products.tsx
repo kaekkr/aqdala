@@ -1,7 +1,21 @@
+import ProductCard from '@/app/products/ProductCard'
+import type { Product } from '@/lib/types'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Products = () => {
+const getData = async () => {
+	const res = await fetch('http://localhost:3000/api/products')
+	
+	if (!res.ok) {
+		throw new Error('Something went wrong')
+	}
+	
+	return res.json()
+}
+
+const Products = async () => {
+	const products: Product[] = await getData()
+	
 	return <div>
 		<p className='font-bold text-white text-9xl text-center'>Наши продукты</p>
 		<div className='bg-white rounded-2xl p-10 space-y-5'>
@@ -20,6 +34,10 @@ const Products = () => {
 					<Image src='/home/arrow-in-circle-orange.svg' alt='arrow in circle orange' width={32} height={32} />
 				</Link>
 			</div>
+		</div>
+		<div className='grid grid-rows-2 grid-cols-3 gap-y-5 mt-5'>
+			{products.map((product, i) => <ProductCard key={i} name={product.name} description={product.description}
+			                                           img={product.img} />)}
 		</div>
 	</div>
 }
