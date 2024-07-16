@@ -13,10 +13,7 @@ export const connectToDb = async (): Promise<void> => {
 			return
 		}
 		
-		const db = await mongoose.connect(process.env.MONGO_URL as string, {
-			useNewUrlParser: true,
-			useUnifiedTopology: true
-		} as ConnectOptions)
+		const db = await mongoose.connect(process.env.MONGO_URL as string)
 		
 		connection.isConnected = db.connections[0].readyState
 	} catch (error) {
