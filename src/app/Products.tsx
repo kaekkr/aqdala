@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const getData = async () => {
-	const res = await fetch('http://localhost:3000/api/products')
+	const res = await fetch(`${process.env.API}/products`)
 	
 	if (!res.ok) {
 		throw new Error('Something went wrong')
@@ -36,8 +36,8 @@ const Products = async () => {
 			</div>
 		</div>
 		<div className='grid grid-rows-2 grid-cols-3 gap-y-5 mt-5'>
-			{products.map((product, i) => <ProductCard key={i} name={product.name} description={product.description}
-			                                           img={product.img} />)}
+			{products.map((product) => <ProductCard key={product._id} name={product.name} description={product.description}
+			                                        img={product.img} />)}
 		</div>
 	</div>
 }
