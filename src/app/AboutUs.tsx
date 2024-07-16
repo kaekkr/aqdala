@@ -15,7 +15,7 @@ const AboutUs = () => {
 				ассортимент
 				высококачественной
 				продукции под брендом Аршалы Кус</p>
-			<Link href='/about-us' className='inline-flex items-center bg-white rounded-3xl px-3 py-3 space-x-2'>
+			<Link href='/about-us' className='inline-flex items-center bg-white rounded-full px-3 py-3 space-x-2'>
 				<p className='p2-s-medium'>Узнать больше о компании</p>
 				<Image src='/home/arrow-in-circle-orange.svg' alt='arrow in circle orange' width={32} height={32} />
 			</Link>
