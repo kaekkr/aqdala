@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const getData = async () => {
-	const res = await fetch(`${process.env.API}/products`)
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/products`)
 	
 	if (!res.ok) {
 		throw new Error('Something went wrong')
