@@ -3,42 +3,42 @@
 @tailwind utilities;
 
 h1 {
-	@apply text-[40px] leading-[120%];
+	@apply text-[40px] leading-[120%] tracking-tighter;
 }
 
 h2 {
-	@apply text-[33px] leading-[120%];
+	@apply text-[33px] leading-[120%] tracking-tighter;
 }
 
 h3 {
-	@apply text-[28px] leading-[120%];
+	@apply text-[28px] leading-[120%] tracking-tighter;
 }
 
 .p1-l {
-	@apply text-[23px] leading-[auto];
+	@apply text-[23px] leading-[auto] tracking-tighter;
 }
 
 .p2-m {
-	@apply text-[19px] leading-[auto];
+	@apply text-[19px] leading-[auto] tracking-tighter;
 }
 
 .p2-m-medium {
-	@apply font-medium text-[19px] leading-[auto];
+	@apply font-medium text-[19px] leading-[auto] tracking-tighter;
 }
 
 .p2-s {
-	@apply text-[16px] leading-[auto];
+	@apply text-[16px] leading-[auto] tracking-tighter;
 }
 
 .p2-s-medium {
-	@apply font-medium text-[16px] leading-[auto];
+	@apply font-medium text-[16px] leading-[auto] tracking-tighter;
 }
 
 .p3 {
-	@apply text-[13px] leading-[auto];
+	@apply text-[13px] leading-[auto] tracking-tighter;
 }
 
 .d1 {
-	@apply font-medium text-[64px] leading-[120%];
+	@apply font-medium text-[64px] leading-[120%] tracking-tighter;
 }
 

@@ -35,7 +35,7 @@ const Infrastructure = () => {
 			технологиями из
 			Италии, Беларуси и
 			Китая, что позволяет нам поддерживать высокие стандарты производства</p>
-		<div>
+		<div className='grid grid-rows-2 grid-cols-3 gap-5'>
 			{infrastructureCardData.map((item, index) => <InfrastructureCard key={index} title={item.title}
 			                                                                 description={item.description} />)}
 		</div>
