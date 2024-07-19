@@ -1,9 +1,9 @@
 import AboutUs from '@/app/AboutUs'
 import Hero from '@/app/Hero'
-import Products from '@/app/Products'
-import Blogs from '@/app/Blogs'
+import Blogs from '@/app/blogs/Blogs'
+import Products from '@/app/products/Products'
 
-export default function Home() {
+export default async function Home() {
 	return (
 		<main className='space-y-5 w-[1112px] mx-auto'>
 			<Hero />

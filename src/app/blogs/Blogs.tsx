@@ -3,7 +3,7 @@ import type { Blog } from '@/lib/types'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const getData = async () => {
+const getBlogs = async () => {
 	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/blogs`)
 	
 	if (!res.ok) {
@@ -14,7 +14,7 @@ const getData = async () => {
 }
 
 const Blogs = async () => {
-	const blogs: Blog[] = await getData()
+	const blogs: Blog[] = await getBlogs()
 	
 	return <div className='space-y-5'>
 		<div className='space-y-5 text-center'>
@@ -34,8 +34,8 @@ const Blogs = async () => {
 			</Link>
 		</div>
 		<div className='flex justify-center space-x-5'>
-			{blogs.map((blog) => <BlogCard key={blog._id} title={blog.title} description={blog.description}
-			                               img={blog.img} slug={blog.slug} />)}
+			{blogs.slice(0, 3).map((blog) => <BlogCard key={blog._id} title={blog.title} description={blog.description}
+			                                           img={blog.img} slug={blog.slug} />)}
 		</div>
 	</div>
 }

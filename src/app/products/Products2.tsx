@@ -1,9 +1,8 @@
-import ProductCard from '@/app/products/ProductCard'
+import ProductCard2 from '@/app/products/ProductCard2'
 import type { Product } from '@/lib/types'
 import Image from 'next/image'
-import Link from 'next/link'
 
-const getData = async () => {
+const getProducts = async () => {
 	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/products`)
 	
 	if (!res.ok) {
@@ -14,10 +13,9 @@ const getData = async () => {
 }
 
 const Products = async () => {
-	const products: Product[] = await getData()
+	const products: Product[] = await getProducts()
 	
 	return <div>
-		<p className='font-bold text-white text-9xl text-center'>Наши продукты</p>
 		<div className='bg-white rounded-2xl p-10 space-y-5'>
 			<h1 className='max-w-2xl'>At “Aq-Dala”, we believe in raising
 				our chickens humanely to ensure their
@@ -28,16 +26,15 @@ const Products = async () => {
 					процессе, ознакомиться с
 					ассортиментом продукции и увидеть, как мы заботимся о каждом этапе – от выращивания птицы до доставки свежего
 					и вкусного мяса на ваш стол.</p>
-				<Link href='/products'
-				      className='inline-flex border border-black rounded-full items-center px-3 py-3 space-x-2 mt-28'>
-					<p className='p2-s-medium'>Узнать больше о продуктах</p>
-					<Image src='/home/arrow-in-circle-orange.svg' alt='arrow in circle orange' width={32} height={32} />
-				</Link>
+				<div className='flex items-center'>
+					<Image src='/home/down-arrow-in-circle.svg' alt='down-arrow-in-circle' width={32} height={32} />
+					<p className='p2-s text-neutral-dark'>Прокрутите вниз, чтобы узнать больше</p>
+				</div>
 			</div>
 		</div>
 		<div className='grid grid-rows-2 grid-cols-3 gap-y-5 mt-5'>
-			{products.map((product) => <ProductCard key={product._id} name={product.name} description={product.description}
-			                                        img={product.img} />)}
+			{products.map((product) => <ProductCard2 key={product._id} name={product.name} description={product.description}
+			                                         img={product.img} />)}
 		</div>
 	</div>
 }
