@@ -13,16 +13,16 @@ const getBlogs = async () => {
     return res.json()
 }
 
-const Blogs = async () => {
+const BlogsMobile = async () => {
     const blogs: Blog[] = await getBlogs()
 
-    return <div className='hidden md:block space-y-5'>
-        <div className='space-y-5 text-center'>
+    return <div className='md:hidden space-y-5'>
+        <div className='space-y-5'>
             <p className='p3 bg-orange-100 inline rounded-2xl px-2 py-1'>Наши последние публикации в блоге</p>
-            <h1 className='max-w-2xl mx-auto'>At “Aq-Dala”, we believe in raising
+            <h2 className='max-w-2xl mx-auto'>At “Aq-Dala”, we believe in raising
                 our chickens humanely to ensure their
                 <span className='text-orange-500'> safety, nutrition, and overall health.</span>
-            </h1>
+            </h2>
             <p className='p1-l text-neutral-dark max-w-xl mx-auto'>"Delivering Top-Grade Poultry with a Commitment to
                 Ethical
                 Farming Practices
@@ -34,11 +34,11 @@ const Blogs = async () => {
                 <Image src='/home/arrow-in-circle-orange.svg' alt='arrow in circle orange' width={32} height={32}/>
             </Link>
         </div>
-        <div className='flex justify-center space-x-5'>
+        <div className=''>
             {blogs.slice(0, 3).map((blog) => <BlogCard key={blog._id} title={blog.title} description={blog.description}
                                                        img={blog.img} slug={blog.slug}/>)}
         </div>
     </div>
 }
 
-export default Blogs
+export default BlogsMobile

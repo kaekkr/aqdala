@@ -15,7 +15,7 @@ const getBlogData = async (slug: string) => {
     return res.json()
 }
 
-const splitTextByPercentage = (text, percentage) => {
+const splitTextByPercentage = (text: string, percentage: number) => {
     const splitIndex = Math.floor(text.length * percentage);
     const firstPart = text.slice(0, splitIndex);
     const secondPart = text.slice(splitIndex);

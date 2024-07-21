@@ -1,16 +1,20 @@
 import Link from 'next/link'
 
-const Navbar = () => {
-    return <nav>
-        <ul className='flex space-x-5'>
+interface INavbar {
+    className?: string
+}
+
+const Navbar = ({className}: INavbar) => {
+    return <nav className={className}>
+        <ul className='flex flex-col space-y-5 lg:flex-row lg:space-x-5 lg:space-y-0'>
             <li className='p2-m-medium'>
-                <Link href='/about-us'>About Us</Link>
+                <Link href='/about-us'>О нас</Link>
             </li>
             <li className='p2-m-medium'>
-                <Link href='/products'>Products</Link>
+                <Link href='/products'>Наши продукты</Link>
             </li>
             <li className='p2-m-medium'>
-                <Link href='/blogs'>Blog</Link>
+                <Link href='/blogs'>Блог</Link>
             </li>
         </ul>
     </nav>
