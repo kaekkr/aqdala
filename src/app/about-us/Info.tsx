@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const Info = () => {
-	return <div className='bg-white rounded-3xl space-y-5 p-5'>
+	return <div className='hidden md:block bg-white rounded-3xl space-y-5 p-5'>
 		<h1 className='max-w-2xl'>Нам важно удовлетворения
 			<span className='text-orange-500'> потребностей клиентов и поддержании
 			конкурентоспособности на рынке</span>

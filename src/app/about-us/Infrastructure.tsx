@@ -1,6 +1,6 @@
 import InfrastructureCard from '@/app/about-us/InfrastructureCard'
 
-const infrastructureCardData = [
+export const infrastructureCardData = [
 	{
 		title: 'Современные птичники',
 		description: 'Современные, что указывает на использование передовых технологий и инновационных решений в птицеводстве.'
@@ -24,7 +24,7 @@ const infrastructureCardData = [
 ]
 
 const Infrastructure = () => {
-	return <div className='text-center space-y-5'>
+	return <div className='hidden md:block text-center space-y-5'>
 		<p className='p3 bg-orange-100 inline rounded-2xl px-2 py-1 mx-auto'>Инфраструктура</p>
 		<h1 className='max-w-2xl mx-auto'>Мы - быстро растущее
 			предприятие, использующее <span className='text-orange-500'>передовые
