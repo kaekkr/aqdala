@@ -21,3 +21,10 @@ export const connectToDb = async (): Promise<void> => {
 		throw new Error(error as string)
 	}
 }
+
+export const splitTextByPercentage = (text: string, percentage: number) => {
+	const splitIndex = Math.floor(text.length * percentage)
+	const firstPart = text.slice(0, splitIndex)
+	const secondPart = text.slice(splitIndex)
+	return { firstPart, secondPart }
+}
