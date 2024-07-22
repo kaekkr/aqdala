@@ -12,10 +12,10 @@ const getProducts = async () => {
 	return res.json()
 }
 
-const Products = async () => {
+const Products2 = async () => {
 	const products: Product[] = await getProducts()
 	
-	return <div>
+	return <div className='hidden md:block'>
 		<div className='bg-white rounded-2xl p-10 space-y-5'>
 			<h1 className='max-w-2xl'>At “Aq-Dala”, we believe in raising
 				our chickens humanely to ensure their
@@ -39,4 +39,4 @@ const Products = async () => {
 	</div>
 }
 
-export default Products
+export default Products2
