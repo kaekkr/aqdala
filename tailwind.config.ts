@@ -23,7 +23,8 @@ const config: Config = {
 					dark: '#595959'
 				},
 				black: '#1C1C1C',
-				white: '#ffffff'
+				white: '#ffffff',
+				green: '#2F7535'
 			}
 		}
 	},

@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <header
-            className='bg-white flex flex-col lg:flex-row justify-between items-center px-6 py-3 rounded-b-2xl shadow-sm'>
+            className='bg-white flex flex-col lg:flex-row justify-between items-center px-11 rounded-b-2xl shadow-sm'>
             <div className='flex justify-between w-full lg:w-auto'>
                 <Link href='/'>
                     <Image src='/logo.svg' alt='logo' width={105} height={50}/>

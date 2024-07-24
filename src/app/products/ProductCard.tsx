@@ -6,9 +6,9 @@ interface IProductCard {
 }
 
 const ProductCard = ({ name, img }: IProductCard) => {
-	return <div className='space-y-3 flex flex-col items-center'>
-		<Image src={img} alt={img} width={312} height={312} className='bg-white p-5 rounded-xl' />
-		<p className='p3 md:p2-m-medium max-w-xs text-center'>{name}</p>
+	return <div className='flex flex-col items-center'>
+		<Image src={img} alt={img} width={360} height={360} className='bg-white p-6 rounded-xl' />
+		<p className='p2-m-medium max-w-xs text-center p-6'>{name}</p>
 	</div>
 }
 
