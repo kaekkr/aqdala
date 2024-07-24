@@ -16,7 +16,7 @@ const getData = async () => {
 const Products = async () => {
 	const products: Product[] = await getData()
 	
-	return <div className='hidden md:block relative mt-[195.73px]'>
+	return <div className='hidden lg:block relative mt-[195.73px]'>
 		<p className='absolute top-[-180px] w-full font-bold text-white text-[169.86px] tracking-[-0.1em]'>Наши
 			продукты</p>
 		<div className='bg-white rounded-2xl px-10 py-16 space-y-6'>

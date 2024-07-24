@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const AboutUs = () => {
-	return <div className='hidden md:flex justify-between max-w-full mt-32'>
+	return <div className='hidden lg:flex justify-between max-w-full mt-32'>
 		<div className='space-y-6'>
 			<div>
 				<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1'>Коротко о нас</p>

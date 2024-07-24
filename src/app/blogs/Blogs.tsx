@@ -16,7 +16,7 @@ const getBlogs = async () => {
 const Blogs = async () => {
 	const blogs: Blog[] = await getBlogs()
 	
-	return <div className='hidden md:block space-y-16 mt-[166px]'>
+	return <div className='hidden lg:block space-y-16 mt-[166px]'>
 		<div className='space-y-8 text-center'>
 			<div className='space-y-4'>
 				<div>

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Footer = () => {
 	return <footer
-		className='bg-white rounded-2xl flex flex-col md:items-center md:text-center p-10 space-y-5 w-[1112px] mx-auto'>
+		className='bg-white rounded-2xl flex flex-col md:items-center md:text-center p-10 space-y-5 md:w-[648px] lg:w-[1112px] mx-auto'>
 		<div className='space-y-8 flex flex-col items-center'>
 			<Image src='/logo-with-kazakhstan.svg' alt='logo' width={238} height={114} />
 			<div className='space-y-4'>
