@@ -8,9 +8,11 @@ interface IProductCard2 {
 
 const ProductCard = ({ name, description, img }: IProductCard2) => {
 	return <div className='space-y-2 md:space-y-3 flex flex-col items-center text-center'>
-		<Image src={img} alt={img} width={312} height={312} className='bg-white p-2 md:p-5 rounded-3xl' />
-		<p className='p3 md:p2-m-medium max-w-xs'>{name}</p>
-		<p className='p3 md:p2-m text-neutral-dark max-w-[9rem] md:max-w-xs'>{description}</p>
+		<Image src={img} alt={img} width={360} height={360} className='bg-white p-2 md:p-5 rounded-3xl' />
+		<div className='p-6 space-y-6'>
+			<p className='p2-m-medium max-w-[18rem]'>{name}</p>
+			<p className='p2-m text-neutral-dark max-w-[9rem] md:max-w-[19rem]'>{description}</p>
+		</div>
 	</div>
 }
 

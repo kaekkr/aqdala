@@ -1,9 +1,9 @@
 import Blogs2 from '@/app/blogs/Blogs2'
-import Blogs2Mobile from '@/app/blogs/Blogs2Mobile'
+import Blogs2Mobile from '@/app/blogs/_mobile/Blogs2Mobile'
 
 const BlogsPage = async () => {
 	
-	return <main className='space-y-5 w-[344px] md:w-[1112px] mx-auto'>
+	return <main className='w-[344px] md:w-[1112px] mx-auto'>
 		<Blogs2 />
 		<Blogs2Mobile />
 	</main>
