@@ -3,7 +3,7 @@ import Hero from '@/app/Hero'
 import Blogs from '@/app/blogs/Blogs'
 import Products from '@/app/products/Products'
 import HeroMobile from '@/app/HeroMobile'
-import AboutUsMobile from '@/app/about-us/AboutUsMobile'
+import AboutUsMobile from '@/app/about-us/_mobile/AboutUsMobile'
 import ProductsMobile from '@/app/products/ProductsMobile'
 import BlogsMobile from '@/app/blogs/BlogsMobile'
 
