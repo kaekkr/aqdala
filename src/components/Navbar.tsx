@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const Navbar = () => {
-	return <nav className='hidden md:inline md:py-[28.5px] lg:py-[30px]'>
+	return <nav className='hidden md:block md:py-[28.5px] lg:py-[30px]'>
 		<ul className='flex space-x-4'>
 			<li className='font-medium'>
 				<Link href='/about-us'>О нас</Link>
