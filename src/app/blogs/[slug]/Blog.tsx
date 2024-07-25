@@ -22,7 +22,7 @@ const Blog = async ({ params }: IBlog) => {
 	const percentage = 0.6
 	const { firstPart, secondPart } = splitTextByPercentage(blog.title, percentage)
 	
-	return <div className='hidden md:block text-center space-y-16'>
+	return <div className='hidden lg:block text-center space-y-16'>
 		<Image src={blog.img} alt='blog' height={485} width={1112} className='rounded-2xl' />
 		<div className='space-y-6'>
 			<h1 className='max-w-xl mx-auto'>

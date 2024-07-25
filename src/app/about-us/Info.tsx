@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const Info = () => {
-	return <div className='hidden md:block bg-white space-y-16 rounded-3xl py-16 px-10 mt-[128px]'>
+	return <div className='hidden lg:block bg-white space-y-16 rounded-3xl py-16 px-10 mt-[128px]'>
 		<div className='space-y-16'>
 			<h1 className='max-w-[45rem]'>Нам важно удовлетворения
 				<span className='text-orange-500'> потребностей клиентов и поддержании

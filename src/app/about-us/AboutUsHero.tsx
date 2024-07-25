@@ -1,5 +1,5 @@
 const AboutUsHero = () => {
-	return <div className='hidden md:block bg-white text-center rounded-3xl p-10'>
+	return <div className='hidden lg:block bg-white text-center rounded-3xl p-10'>
 		<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1 mx-auto'>Немножко о нас</p>
 		<div className='space-y-4'>
 			<h1 className='max-w-[43rem] mx-auto'>

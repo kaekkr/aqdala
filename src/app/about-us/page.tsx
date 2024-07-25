@@ -6,7 +6,7 @@ import AboutUsHeroMobile from '@/app/about-us/_mobile/AboutUsHeroMobile'
 import InfrastructureMobile from '@/app/about-us/_mobile/InfrastructureMobile'
 
 const AboutUsPage = () => {
-	return <main className='w-[344px] md:w-[1112px] mx-auto'>
+	return <main className='w-[344px] md:w-[548px] lg:w-[1112px] mx-auto'>
 		<AboutUsHero />
 		<AboutUsHeroMobile />
 		<Infrastructure />

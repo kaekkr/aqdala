@@ -24,7 +24,7 @@ export const infrastructureCardData = [
 ]
 
 const Infrastructure = () => {
-	return <div className='hidden md:block text-center space-y-12 mt-[128.5px]'>
+	return <div className='hidden lg:block text-center space-y-12 mt-[128.5px]'>
 		<div className='space-y-6'>
 			<div>
 				<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1 mx-auto'>Инфраструктура</p>

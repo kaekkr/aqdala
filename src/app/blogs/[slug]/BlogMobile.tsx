@@ -22,9 +22,10 @@ const BlogMobile = async ({ params }: IBlogMobile) => {
 	const percentage = 0.6
 	const { firstPart, secondPart } = splitTextByPercentage(blog.title, percentage)
 	
-	return <div className='md:hidden'>
-		<Image src={blog.img} alt='blog' height={485} width={344} className='rounded-2xl' />
-		<h2 className='max-w-2xl mx-auto mt-8'>
+	return <div className='lg:hidden'>
+		<Image src={blog.img} alt='blog' height={485} width={344} className='md:hidden rounded-2xl' />
+		<Image src={blog.img} alt='blog' height={548} width={485} className='hidden md:block rounded-2xl' />
+		<h2 className='max-w-2xl md:max-w-sm mx-auto md:mx-0 mt-8 md:mt-16'>
 			{firstPart}
 			<span className='text-orange-500'>{secondPart}</span>
 		</h2>
