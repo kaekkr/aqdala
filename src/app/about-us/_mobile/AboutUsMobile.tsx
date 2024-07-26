@@ -42,7 +42,7 @@ const AboutUsMobile = () => {
 		</div>
 		<div className='space-y-2'>
 			{aboutUsCardData.map((item, i) => <AboutUsCard key={i} title={item.title} description={item.description}
-			                                               img={item.img} />)}
+			                                               img={item.img} index={i} />)}
 		</div>
 	</div>
 }

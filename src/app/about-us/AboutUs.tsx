@@ -1,3 +1,5 @@
+import AboutUsCard from '@/app/about-us/AboutUsCard'
+import AboutUsSection from '@/app/about-us/AboutUsSection'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -20,7 +22,8 @@ const AboutUs = () => {
 				<Image src='/home/arrow-in-circle-orange.svg' alt='arrow in circle orange' width={32} height={32} />
 			</Link>
 		</div>
-		<Image src='/home/about-us.png' alt='about us' width={384} height={654} />
+		{/* <Image src='/home/about-us.png' alt='about us' width={384} height={654} /> */}
+		<AboutUsSection />
 	</div>
 }
 
