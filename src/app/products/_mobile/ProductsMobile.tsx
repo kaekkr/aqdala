@@ -18,7 +18,7 @@ const ProductsMobile = async () => {
 	
 	return <div className='lg:hidden relative mt-[122px] space-y-4'>
 		<p
-			className='absolute top-[-55px] md:top-[-90px] w-full font-bold text-white text-[52.56px] md:text-[83.71px] tracking-[-0.1em]'>Наши
+			className='absolute top-[-55px] md:top-[-90px] w-full font-bold text-white text-[49px] md:text-[83.71px] tracking-[-0.1em]'>Наши
 			продукты</p>
 		<div className='bg-white rounded-2xl p-6 space-y-12'>
 			<div className='space-y-6'>
