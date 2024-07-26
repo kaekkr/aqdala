@@ -21,7 +21,7 @@ const aboutUsCardData = [
 ]
 
 const AboutUsMobile = () => {
-	return <div className='lg:hidden max-w-full flex flex-col md:mt-10 space-y-12'>
+	return <div className='lg:hidden max-w-full flex flex-col mt-8 md:mt-10 space-y-12'>
 		<div className='space-y-6'>
 			<div>
 				<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1'>Коротко о нас</p>

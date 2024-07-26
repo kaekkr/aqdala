@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 
 const HeroMobile = () => {
-	return <div className='lg:hidden bg-white rounded-2xl flex flex-col px-5 py-3 md:p-6 md:space-y-6'>
+	return <div className='lg:hidden bg-white rounded-2xl flex flex-col px-[23px] py-6 md:p-6 md:space-y-6'>
 		<div>
 			<div className='space-y-6'>
 				<h2 className='max-w-xl md:max-w-md'>Откройте для себя мир
@@ -19,7 +19,8 @@ const HeroMobile = () => {
 		</div>
 		<div className='flex items-center'>
 			<Image src='/home/down-arrow-in-circle.svg' alt='down-arrow-in-circle' width={32} height={32} />
-			<p className='p2-s text-neutral-dark'>Прокрутите вниз, чтобы узнать больше</p>
+			<p className='hidden md:block p2-s text-neutral-dark'>Прокрутите вниз, чтобы узнать больше</p>
+			<p className='md:hidden p3 text-neutral-dark'>Прокрутите вниз, чтобы узнать больше</p>
 		</div>
 	</div>
 }
