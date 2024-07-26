@@ -17,7 +17,9 @@ const ProductsMobile = async () => {
 	const products: Product[] = await getData()
 	
 	return <div className='lg:hidden relative mt-[122px] space-y-4'>
-		<p className='absolute top-[-90px] w-full font-bold text-white text-[83.71px] tracking-[-0.1em]'>Наши продукты</p>
+		<p
+			className='absolute top-[-55px] md:top-[-90px] w-full font-bold text-white text-[52.56px] md:text-[83.71px] tracking-[-0.1em]'>Наши
+			продукты</p>
 		<div className='bg-white rounded-2xl p-6 space-y-12'>
 			<div className='space-y-6'>
 				<h2 className='md:hidden max-w-2xl'>At “Aq-Dala”, we believe in raising
@@ -41,7 +43,7 @@ const ProductsMobile = async () => {
 				<Image src='/home/arrow-in-circle-orange.svg' alt='arrow in circle orange' width={32} height={32} />
 			</Link>
 		</div>
-		<div className='grid grid-rows-2 grid-cols-2 gap-4'>
+		<div className='grid grid-rows-2 grid-cols-2 md:gap-4 gap-2'>
 			{products.map((product) => <ProductCard key={product._id} name={product.name}
 			                                        img={product.img} />)}
 		</div>

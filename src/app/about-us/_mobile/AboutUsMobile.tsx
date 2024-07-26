@@ -23,7 +23,7 @@ const aboutUsCardData = [
 const AboutUsMobile = () => {
 	return <div className='lg:hidden max-w-full flex flex-col mt-8 md:mt-10 space-y-12'>
 		<div className='space-y-6'>
-			<div>
+			<div className='space-y-1'>
 				<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1'>Коротко о нас</p>
 				<h2 className='max-w-3xl md:max-w-md'>Компания Ак-Дала Агро – один из
 					ведущих производителей <span className='text-orange-500'>куриного

@@ -1,5 +1,5 @@
 const AboutUsHeroMobile = () => {
-	return <div className='lg:hidden bg-white text-center rounded-3xl py-10 px-6 space-y-6'>
+	return <div className='lg:hidden bg-white text-center rounded-3xl py-6 md:py-10 px-6 space-y-6'>
 		<div className='space-y-4'>
 			<div className='space-y-1'>
 				<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1 mx-auto'>Немножко о нас</p>
@@ -20,8 +20,8 @@ const AboutUsHeroMobile = () => {
 			</div>
 		</div>
 		<div className='md:hidden text-left space-y-4'>
-			<div className='bg-neutral-light rounded-2xl rounded-tr-[120px] w-[270px] h-[261px]'></div>
-			<div className='bg-neutral-light rounded-2xl rounded-tl-[120px] w-[270px] h-[261px]'></div>
+			<div className='bg-neutral-light rounded-2xl rounded-tr-[120px] w-[296px] h-[261px]'></div>
+			<div className='bg-neutral-light rounded-2xl rounded-tl-[120px] w-[296px] h-[261px]'></div>
 			<p className='d1'>{'>'}150</p>
 			<p className='p2-m text-neutral-dark max-w-[18rem] text-left'>За время своего существования
 				мы смогли трудоустроить 150

@@ -19,7 +19,7 @@ const BlogsMobile = async () => {
 	return <div className='lg:hidden space-y-16 mt-8'>
 		<div className='space-y-8'>
 			<div className='space-y-4'>
-				<div>
+				<div className='space-y-1'>
 					<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1'>Наши последние публикации в блоге</p>
 					<h2 className='md:hidden max-w-2xl mx-auto'>At “Aq-Dala”, we believe in raising
 						our chickens humanely to ensure their
