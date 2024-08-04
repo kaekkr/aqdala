@@ -5,8 +5,7 @@ import Link from 'next/link'
 
 const getData = async () => {
 	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/products`,
-		{ cache: 'no-store' }
+		`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/products`
 	)
 
 	if (!res.ok) {
