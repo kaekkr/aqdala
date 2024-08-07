@@ -24,18 +24,22 @@ const Blogs = async () => {
 						<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1'>
 							Наши последние публикации в блоге
 						</p>
-						<h1 className='max-w-2xl mx-auto'>
-							At “Aq-Dala”, we believe in raising our chickens humanely to
-							ensure their
+						<h1 className='max-w-3xl mx-auto'>
+							Добро пожаловать на наш информационный портал! Здесь вы найдете
+							ссылки на самые свежие и интересные новости
 							<span className='text-orange-500'>
 								{' '}
-								safety, nutrition, and overall health.
+								о компании “Ак-Дала Агро”.
 							</span>
 						</h1>
 					</div>
 					<p className='p1-l text-neutral-dark max-w-xl mx-auto'>
-						"Delivering Top-Grade Poultry with a Commitment to Ethical Farming
-						Practices and Unmatched Freshness"
+						"Ознакомьтесь с публикациями, где рассказывается о нашей компании,
+						наших достижениях и инновациях. Узнайте больше о том, как проходят
+						экспедиции и экскурсии на нашей базе, и погрузитесь в увлекательные
+						истории о нашем пути к успеху. Мы всегда стремимся делиться с вами
+						важными событиями и достижениями, чтобы вы могли лучше понять нашу
+						миссию и ценности."
 					</p>
 				</div>
 				<Link

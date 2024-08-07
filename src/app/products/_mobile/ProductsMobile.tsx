@@ -26,20 +26,18 @@ const ProductsMobile = async () => {
 			<div className='bg-white rounded-2xl p-6 space-y-12'>
 				<div className='space-y-6'>
 					<h2 className='md:hidden max-w-2xl'>
-						At “Aq-Dala”, we believe in raising our chickens humanely to ensure
-						their
 						<span className='text-orange-500'>
-							{' '}
-							safety, nutrition, and overall health.
+							Безопасность, питание и здоровье.{' '}
 						</span>
+						В Ак-Дала Агро, мы верим в гуманное выращивание наших кур, чтобы
+						обеспечить их безопасность, питание и общее здоровье.
 					</h2>
 					<h1 className='hidden md:block max-w-2xl'>
-						At “Aq-Dala”, we believe in raising our chickens humanely to ensure
-						their
 						<span className='text-orange-500'>
-							{' '}
-							safety, nutrition, and overall health.
+							Безопасность, питание и здоровье.{' '}
 						</span>
+						В Ак-Дала Агро, мы верим в гуманное выращивание наших кур, чтобы
+						обеспечить их безопасность, питание и общее здоровье.
 					</h1>
 					<p className='p1-l text-neutral-dark max-w-[17.5rem] md:max-w-lg'>
 						На сайте вы сможете узнать больше о нашем производственном процессе,

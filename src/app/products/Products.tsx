@@ -25,12 +25,11 @@ const Products = async () => {
 			</p>
 			<div className='bg-white rounded-2xl px-10 py-16 space-y-6'>
 				<h1 className='max-w-[36.7rem]'>
-					At “Aq-Dala”, we believe in raising our chickens humanely to ensure
-					their
 					<span className='text-orange-500'>
-						{' '}
-						safety, nutrition, and overall health.
+						Безопасность, питание и здоровье.{' '}
 					</span>
+					В Ак-Дала Агро, мы верим в гуманное выращивание наших кур, чтобы
+					обеспечить их безопасность, питание и общее здоровье.
 				</h1>
 				<div className='flex justify-between items-center'>
 					<p className='p1-l text-neutral-dark max-w-[38rem]'>

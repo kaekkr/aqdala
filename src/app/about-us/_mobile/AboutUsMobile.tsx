@@ -6,19 +6,19 @@ const aboutUsCardData = [
 	{
 		title: 'Передовые технологии',
 		description:
-			'Our on-site veterinary staff carefully monitors our flock’s health and development on a daily basis, rain or shine',
+			'Наши инновационные методы выращивания и ухода за птицей обеспечивают наилучшие условия для ее развития и здоровья, используя самые современные технологии в сфере птицеводства.',
 		img: '/home/circles-1.svg',
 	},
 	{
 		title: 'Высокие стандарты качества ',
 		description:
-			'Our on-site veterinary staff carefully monitors our flock’s health and development on a daily basis, rain or shine',
+			'Мы придерживаемся строгих стандартов качества, гарантируя, что каждый продукт соответствует высочайшим требованиям, обеспечивая безопасность и свежесть нашей продукции.',
 		img: '/home/circles-2.svg',
 	},
 	{
 		title: 'Безопасность',
 		description:
-			'Our on-site veterinary staff carefully monitors our flock’s health and development on a daily basis, rain or shine',
+			'Мы уделяем особое внимание безопасности на всех этапах производства, от фермы до вашего стола, чтобы обеспечить надежность и качество нашей продукции.',
 		img: '/home/circles-3.svg',
 	},
 ]
@@ -35,7 +35,7 @@ const AboutUsMobile = () => {
 						Коротко о нас
 					</p>
 					<h2 className='max-w-3xl md:max-w-md'>
-						Компания Ак-Дала Агро – один из ведущих производителей{' '}
+						Компания Ак-Дала Агро – одна из ведущих производителей{' '}
 						<span className='text-orange-500'>куриного мяса в Казахстане.</span>
 					</h2>
 				</div>
