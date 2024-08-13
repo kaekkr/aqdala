@@ -1,4 +1,4 @@
-import InfrastructureCard from '@/app/about-us/InfrastructureCard'
+import InfrastructureCard from '@/app/[locale]/about-us/InfrastructureCard'
 
 export const infrastructureCardData = [
 	{

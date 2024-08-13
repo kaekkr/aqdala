@@ -1,4 +1,4 @@
-import BlogCard from '@/app/blogs/BlogCard'
+import BlogCard from '@/app/[locale]/blogs/BlogCard'
 import type { Blog } from '@/lib/types'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,26 +13,18 @@ const getBlogs = async () => {
 	return res.json()
 }
 
-const BlogsMobile = async () => {
+const Blogs = async () => {
 	const blogs: Blog[] = await getBlogs()
 
 	return (
-		<div data-aos='zoom-in' className='lg:hidden space-y-16 mt-8'>
-			<div className='space-y-8'>
+		<div data-aos='zoom-in' className='hidden lg:block space-y-16 mt-[166px]'>
+			<div className='space-y-8 text-center'>
 				<div className='space-y-4'>
-					<div className='space-y-1'>
+					<div>
 						<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1'>
 							Наши последние публикации в блоге
 						</p>
-						<h2 className='md:hidden max-w-2xl mx-auto'>
-							Добро пожаловать на наш информационный портал! Здесь вы найдете
-							ссылки на самые свежие и интересные новости
-							<span className='text-orange-500'>
-								{' '}
-								о компании “Ак-Дала Агро”.
-							</span>
-						</h2>
-						<h1 className='hidden md:block max-w-xl mx-auto'>
+						<h1 className='max-w-3xl mx-auto'>
 							Добро пожаловать на наш информационный портал! Здесь вы найдете
 							ссылки на самые свежие и интересные новости
 							<span className='text-orange-500'>
@@ -63,7 +55,7 @@ const BlogsMobile = async () => {
 					/>
 				</Link>
 			</div>
-			<div className='space-y-4'>
+			<div className='flex justify-center space-x-4'>
 				{blogs.slice(0, 3).map(blog => (
 					<BlogCard
 						key={blog._id}
@@ -78,4 +70,4 @@ const BlogsMobile = async () => {
 	)
 }
 
-export default BlogsMobile
+export default Blogs

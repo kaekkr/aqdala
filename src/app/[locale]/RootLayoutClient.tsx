@@ -12,7 +12,7 @@ import './globals.css'
 
 const manrope = Manrope({ subsets: ['latin'], weight: ['400', '500'] })
 
-export default function RootLayout({
+export default function RootLayoutClient({
 	children,
 }: Readonly<{
 	children: React.ReactNode
@@ -24,16 +24,16 @@ export default function RootLayout({
 	}, [])
 
 	return (
-		<html lang='ru'>
-			<body className={`${manrope.className} bg-neutral-light`}>
-				<Header />
-				{isNavOpen ? (
-					<NavbarMobile />
-				) : (
-					<div className='pt-11 pb-[122px]'>{children}</div>
-				)}
-				<Footer />
-			</body>
-		</html>
+		<>
+			<Header />
+			{isNavOpen ? (
+				<NavbarMobile />
+			) : (
+				<div className={`pt-11 pb-[122px] ${manrope.className}`}>
+					{children}
+				</div>
+			)}
+			<Footer />
+		</>
 	)
 }

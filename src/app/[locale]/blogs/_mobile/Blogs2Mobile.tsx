@@ -1,4 +1,4 @@
-import BlogCard from '@/app/blogs/BlogCard'
+import BlogCard from '@/app/[locale]/blogs/BlogCard'
 import type { Blog } from '@/lib/types'
 import Image from 'next/image'
 

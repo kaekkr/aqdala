@@ -1,4 +1,4 @@
-import ProductCard2 from '@/app/products/ProductCard2'
+import ProductCard2 from '@/app/[locale]/products/ProductCard2'
 import type { Product } from '@/lib/types'
 import Image from 'next/image'
 

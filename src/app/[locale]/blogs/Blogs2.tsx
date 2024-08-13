@@ -1,32 +1,30 @@
-import ProductCard2 from '@/app/products/ProductCard2'
-import type { Product } from '@/lib/types'
+import BlogCard from '@/app/[locale]/blogs/BlogCard'
+import type { Blog } from '@/lib/types'
 import Image from 'next/image'
 
-const getProducts = async () => {
-	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/products`
-	)
+const getBlogs = async () => {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/blogs`)
 
 	if (!res.ok) {
-		throw new Error('Error while getting list of products')
+		throw new Error('Error while getting list of blogs')
 	}
 
 	return res.json()
 }
 
-const Products2 = async () => {
-	const products: Product[] = await getProducts()
+const Blogs2 = async () => {
+	const blogs: Blog[] = await getBlogs()
 
 	return (
 		<div className='hidden lg:block space-y-8'>
 			<div className='bg-white rounded-2xl px-10 py-16 space-y-12'>
-				<div>
-					<h1 className='max-w-2xl text-orange-500'>
-						Безопасность, питание и здоровье.
+				<div className='space-y-2'>
+					<h1 className='max-w-3xl'>
+						Добро пожаловать на наш информационный портал!
 					</h1>
-					<h1 className='max-w-2xl'>
-						В Ак-Дала Агро, мы верим в гуманное выращивание наших кур, чтобы
-						обеспечить их безопасность, питание и общее здоровье.
+					<h1 className='max-w-xl'>
+						Здесь вы найдете ссылки на самые свежие и интересные новости
+						<span className='text-orange-500'> о компании “Ак-Дала Агро”.</span>
 					</h1>
 				</div>
 				<div className='flex justify-between'>
@@ -52,13 +50,14 @@ const Products2 = async () => {
 					</div>
 				</div>
 			</div>
-			<div className='grid grid-rows-2 grid-cols-3 gap-4'>
-				{products.map(product => (
-					<ProductCard2
-						key={product._id}
-						name={product.name}
-						description={product.description}
-						img={product.img}
+			<div className='grid grid-rows-2 grid-cols-3 gap-y-5 mt-5'>
+				{blogs.map(blog => (
+					<BlogCard
+						key={blog._id}
+						title={blog.title}
+						description={blog.description}
+						img={blog.img}
+						slug={blog.slug}
 					/>
 				))}
 			</div>
@@ -66,4 +65,4 @@ const Products2 = async () => {
 	)
 }
 
-export default Products2
+export default Blogs2

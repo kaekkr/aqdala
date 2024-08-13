@@ -1,4 +1,4 @@
-import AboutUsSection from '@/app/about-us/AboutUsSection'
+import AboutUsSection from '@/app/[locale]/about-us/AboutUsSection'
 import Image from 'next/image'
 import Link from 'next/link'
 

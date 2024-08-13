@@ -1,4 +1,4 @@
-import AboutUsCard from '@/app/about-us/AboutUsCard'
+import AboutUsCard from '@/app/[locale]/about-us/AboutUsCard'
 import Image from 'next/image'
 import Link from 'next/link'
 
