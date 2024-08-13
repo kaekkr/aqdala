@@ -1,32 +1,54 @@
 'use client'
 
-import Link from 'next/link'
 import useNavbarStore from '@/lib/store'
+import useLocaleStore from '@/lib/useLocaleStore'
+import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const NavbarMobile = () => {
 	const { isNavOpen, closeNav } = useNavbarStore()
+	const { locale } = useLocaleStore()
 	const pathname = usePathname()
-	
+	const t = useTranslations('Navbar')
+
 	return (
 		<>
 			{isNavOpen && (
-				<nav
-					className='w-[344px] pt-11 pb-[122px] mx-auto flex flex-col md:hidden'>
+				<nav className='w-[344px] pt-11 pb-[122px] mx-auto flex flex-col md:hidden'>
 					<ul className='space-y-5'>
 						<li className='font-medium text-2xl'>
-							<Link href='/about-us' onClick={closeNav}
-							      className={`${pathname != '/about-us' && 'text-neutral-dark'} text-[33px] leading-[120%] tracking-tighter`}>О
-								нас</Link>
+							<Link
+								href={`/${locale}/about-us`}
+								onClick={closeNav}
+								className={`${
+									pathname != `/${locale}/about-us` && 'text-neutral-dark'
+								} text-[33px] leading-[120%] tracking-tighter`}
+							>
+								{t('about-us')}
+							</Link>
 						</li>
 						<li className='font-medium text-2xl'>
-							<Link href='/products' onClick={closeNav}
-							      className={`${pathname != '/products' && 'text-neutral-dark'} text-[33px] leading-[120%] tracking-tighter`}>Наши
-								продукты</Link>
+							<Link
+								href={`/${locale}/products`}
+								onClick={closeNav}
+								className={`${
+									pathname != `/${locale}/products` && 'text-neutral-dark'
+								} text-[33px] leading-[120%] tracking-tighter`}
+							>
+								{t('our-products')}
+							</Link>
 						</li>
 						<li className='font-medium text-2xl'>
-							<Link href='/blogs' onClick={closeNav}
-							      className={`${pathname != '/blogs' && 'text-neutral-dark'} text-[33px] leading-[120%] tracking-tighter`}>Блог</Link>
+							<Link
+								href={`/${locale}/blogs`}
+								onClick={closeNav}
+								className={`${
+									pathname != `/${locale}/blogs` && 'text-neutral-dark'
+								} text-[33px] leading-[120%] tracking-tighter`}
+							>
+								{t('blogs')}
+							</Link>
 						</li>
 					</ul>
 				</nav>

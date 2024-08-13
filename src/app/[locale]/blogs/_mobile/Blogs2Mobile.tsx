@@ -16,7 +16,7 @@ const Blogs2Mobile = async () => {
 	const blogs: Blog[] = await getBlogs()
 
 	return (
-		<div className='lg:hidden'>
+		<div data-aos='zoom-in' className='lg:hidden'>
 			<div className='bg-white rounded-2xl px-6 py-16 space-y-5 md:space-y-12'>
 				<div className='space-y-2'>
 					<h2 className='max-w-2xl'>

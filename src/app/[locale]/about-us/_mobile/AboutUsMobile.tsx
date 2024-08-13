@@ -1,29 +1,29 @@
 import AboutUsCard from '@/app/[locale]/about-us/AboutUsCard'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const aboutUsCardData = [
 	{
-		title: 'Передовые технологии',
-		description:
-			'Наши инновационные методы выращивания и ухода за птицей обеспечивают наилучшие условия для ее развития и здоровья, используя самые современные технологии в сфере птицеводства.',
+		name: 'advanced-technologies',
 		img: '/home/circles-1.svg',
 	},
 	{
-		title: 'Высокие стандарты качества ',
-		description:
-			'Мы придерживаемся строгих стандартов качества, гарантируя, что каждый продукт соответствует высочайшим требованиям, обеспечивая безопасность и свежесть нашей продукции.',
+		name: 'high-quality-standards',
 		img: '/home/circles-2.svg',
 	},
 	{
-		title: 'Безопасность',
-		description:
-			'Мы уделяем особое внимание безопасности на всех этапах производства, от фермы до вашего стола, чтобы обеспечить надежность и качество нашей продукции.',
+		name: 'safety',
 		img: '/home/circles-3.svg',
 	},
 ]
 
 const AboutUsMobile = () => {
+	const t = useTranslations('Home.About-us')
+	const title = t('title')
+	const title1 = title.slice(0, 17)
+	const title2 = title.slice(17, title.length)
+
 	return (
 		<div
 			data-aos='zoom-in'
@@ -35,19 +35,17 @@ const AboutUsMobile = () => {
 						Коротко о нас
 					</p>
 					<h2 className='max-w-3xl md:max-w-md'>
-						Компания Ак-Дала Агро – одна из ведущих производителей{' '}
-						<span className='text-orange-500'>куриного мяса в Казахстане.</span>
+						{title1} <span className='text-orange-500'>{title2}</span>
 					</h2>
 				</div>
 				<p className='p1-l text-neutral-dark max-w-[21rem] md:max-w-lg'>
-					Мы гордимся тем, что предлагаем нашим клиентам широкий ассортимент
-					высококачественной продукции под брендом Аршалы Кус
+					{t('description')}
 				</p>
 				<Link
 					href='/about-us'
 					className='inline-flex items-center bg-white rounded-full px-3 py-3 space-x-2'
 				>
-					<p className='p2-s-medium'>Узнать больше о компании</p>
+					<p className='p2-s-medium'>{t('button')}</p>
 					<Image
 						src='/home/arrow-in-circle-orange.svg'
 						alt='arrow in circle orange'
@@ -57,12 +55,12 @@ const AboutUsMobile = () => {
 				</Link>
 			</div>
 			<div className='space-y-2'>
-				{aboutUsCardData.map((item, i) => (
+				{aboutUsCardData.map((card, i) => (
 					<AboutUsCard
 						key={i}
-						title={item.title}
-						description={item.description}
-						img={item.img}
+						title={t(`${card.name}.title`)}
+						description={t(`${card.name}.description`)}
+						img={card.img}
 						index={i}
 					/>
 				))}

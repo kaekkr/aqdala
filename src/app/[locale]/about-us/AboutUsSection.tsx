@@ -1,35 +1,32 @@
 import AboutUsCard from '@/app/[locale]/about-us/AboutUsCard'
+import { useTranslations } from 'next-intl'
 
 const aboutUsCardData = [
 	{
-		title: 'Передовые технологии',
-		description:
-			'Наши инновационные методы выращивания и ухода за птицей обеспечивают наилучшие условия для ее развития и здоровья, используя самые современные технологии в сфере птицеводства.',
+		name: 'advanced-technologies',
 		img: '/home/circles-1.svg',
 	},
 	{
-		title: 'Высокие стандарты качества ',
-		description:
-			'Мы придерживаемся строгих стандартов качества, гарантируя, что каждый продукт соответствует высочайшим требованиям, обеспечивая безопасность и свежесть нашей продукции.',
+		name: 'high-quality-standards',
 		img: '/home/circles-2.svg',
 	},
 	{
-		title: 'Безопасность',
-		description:
-			'Мы уделяем особое внимание безопасности на всех этапах производства, от фермы до вашего стола, чтобы обеспечить надежность и качество нашей продукции.',
+		name: 'safety',
 		img: '/home/circles-3.svg',
 	},
 ]
 
 const AboutUsSection = () => {
+	const t = useTranslations('Home.About-us.cards')
+
 	return (
 		<div className='flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row lg:flex-wrap lg:justify-end w-[384.61px]'>
-			{aboutUsCardData.map((item, i) => (
+			{aboutUsCardData.map((card, i) => (
 				<AboutUsCard
 					key={i}
-					title={item.title}
-					description={item.description}
-					img={item.img}
+					title={t(`${card.name}.title`)}
+					description={t(`${card.name}.description`)}
+					img={card.img}
 					index={i}
 				/>
 			))}

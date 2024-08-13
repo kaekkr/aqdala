@@ -16,7 +16,7 @@ const Blogs2 = async () => {
 	const blogs: Blog[] = await getBlogs()
 
 	return (
-		<div className='hidden lg:block space-y-8'>
+		<div data-aos='zoom-in' className='hidden lg:block space-y-8'>
 			<div className='bg-white rounded-2xl px-10 py-16 space-y-12'>
 				<div className='space-y-2'>
 					<h1 className='max-w-3xl'>

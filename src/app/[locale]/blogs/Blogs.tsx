@@ -1,5 +1,6 @@
 import BlogCard from '@/app/[locale]/blogs/BlogCard'
 import type { Blog } from '@/lib/types'
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,6 +16,10 @@ const getBlogs = async () => {
 
 const Blogs = async () => {
 	const blogs: Blog[] = await getBlogs()
+	const t = await getTranslations('Home.Blogs')
+	const title = t('title')
+	const title1 = title.slice(0, 118)
+	const title2 = title.slice(118, title.length)
 
 	return (
 		<div data-aos='zoom-in' className='hidden lg:block space-y-16 mt-[166px]'>
@@ -22,31 +27,22 @@ const Blogs = async () => {
 				<div className='space-y-4'>
 					<div>
 						<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1'>
-							Наши последние публикации в блоге
+							{t('mini-title')}
 						</p>
 						<h1 className='max-w-3xl mx-auto'>
-							Добро пожаловать на наш информационный портал! Здесь вы найдете
-							ссылки на самые свежие и интересные новости
-							<span className='text-orange-500'>
-								{' '}
-								о компании “Ак-Дала Агро”.
-							</span>
+							{title1}
+							<span className='text-orange-500'> {title2}</span>
 						</h1>
 					</div>
 					<p className='p1-l text-neutral-dark max-w-xl mx-auto'>
-						"Ознакомьтесь с публикациями, где рассказывается о нашей компании,
-						наших достижениях и инновациях. Узнайте больше о том, как проходят
-						экспедиции и экскурсии на нашей базе, и погрузитесь в увлекательные
-						истории о нашем пути к успеху. Мы всегда стремимся делиться с вами
-						важными событиями и достижениями, чтобы вы могли лучше понять нашу
-						миссию и ценности."
+						"{t('description')}"
 					</p>
 				</div>
 				<Link
 					href='/blogs'
 					className='inline-flex border border-black rounded-full items-center px-3 py-3 space-x-2 mt-28'
 				>
-					<p className='p2-s-medium'>Посмотреть все сообщения в блоге</p>
+					<p className='p2-s-medium'>{t('button')}</p>
 					<Image
 						src='/home/arrow-in-circle-orange.svg'
 						alt='arrow in circle orange'

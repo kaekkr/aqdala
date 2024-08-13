@@ -1,5 +1,6 @@
 import ProductCard from '@/app/[locale]/products/ProductCard'
 import type { Product } from '@/lib/types'
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,22 +16,25 @@ const getData = async () => {
 	return res.json()
 }
 
-const ProductsMobile = async () => {
+const ProductsMobile = async ({ locale }: { locale: string }) => {
 	const products: Product[] = await getData()
+	const navT = await getTranslations('Navbar')
+	const t = await getTranslations('Home.Products')
+	const localeKey = `name-${locale}`
+	const title = t('title')
+	const title1 = title.slice(0, 34)
+	const title2 = title.slice(34, title.length)
 
 	return (
 		<div data-aos='zoom-in' className='lg:hidden relative mt-[122px] space-y-4'>
 			<p className='absolute top-[-55px] md:top-[-90px] w-full font-bold text-white text-[49px] md:text-[83.71px] tracking-[-0.1em]'>
-				Наши продукты
+				{navT('our-products')}
 			</p>
 			<div className='bg-white rounded-2xl p-6 space-y-12'>
 				<div className='space-y-6'>
 					<h2 className='md:hidden max-w-2xl'>
-						<span className='text-orange-500'>
-							Безопасность, питание и здоровье.{' '}
-						</span>
-						В Ак-Дала Агро, мы верим в гуманное выращивание наших кур, чтобы
-						обеспечить их безопасность, питание и общее здоровье.
+						<span className='text-orange-500'>{title1} </span>
+						{title2}
 					</h2>
 					<h1 className='hidden md:block max-w-2xl'>
 						<span className='text-orange-500'>
@@ -40,17 +44,14 @@ const ProductsMobile = async () => {
 						обеспечить их безопасность, питание и общее здоровье.
 					</h1>
 					<p className='p1-l text-neutral-dark max-w-[17.5rem] md:max-w-lg'>
-						На сайте вы сможете узнать больше о нашем производственном процессе,
-						ознакомиться с ассортиментом продукции и увидеть, как мы заботимся о
-						каждом этапе – от выращивания птицы до доставки свежего и вкусного
-						мяса на ваш стол.
+						{t('description')}
 					</p>
 				</div>
 				<Link
 					href='/products'
 					className='inline-flex border border-black rounded-full items-center px-3 py-3 space-x-2 mt-28'
 				>
-					<p className='p2-s-medium'>Узнать больше о продуктах</p>
+					<p className='p2-s-medium'>{t('button')}</p>
 					<Image
 						src='/home/arrow-in-circle-orange.svg'
 						alt='arrow in circle orange'
@@ -63,7 +64,7 @@ const ProductsMobile = async () => {
 				{products.map(product => (
 					<ProductCard
 						key={product._id}
-						name={product.name}
+						name={product[localeKey]}
 						img={product.img}
 					/>
 				))}

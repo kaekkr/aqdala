@@ -18,7 +18,7 @@ const Products2Mobile = async () => {
 	const products: Product[] = await getProducts()
 
 	return (
-		<div className='lg:hidden'>
+		<div data-aos='zoom-in' className='lg:hidden'>
 			<div className='bg-white rounded-2xl py-16 px-6 space-y-12'>
 				<h2 className='max-w-2xl'>
 					<span className='text-orange-500'>

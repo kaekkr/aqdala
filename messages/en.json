@@ -3,5 +3,48 @@
 		"about-us": "About us",
 		"our-products": "Our products",
 		"blogs": "News"
+	},
+	"Home": {
+		"Hero": {
+			"title": "Discover a world of fresh and quality chicken meat!",
+			"description": "Learn how we take care of every stage - from raising poultry to delivering fresh and tasty meat to your table.",
+			"scroll": "Scroll down to learn more"
+		},
+		"About-us": {
+			"title": "'Aq-Dala Agro' is one of the leading producers of chicken meat in Kazakhstan.",
+			"description": "We are proud to offer our customers a wide range of high-quality products under the brand 'Arshaly Kus.'",
+			"button": "Learn more about the company",
+			"cards": {
+				"advanced-technologies": {
+					"title": "Advanced Technologies",
+					"description": "Our innovative methods of raising and caring for poultry ensure high-quality products, developed using modern technology in the poultry industry."
+				},
+				"high-quality-standards": {
+					"title": "High-Quality Standards",
+					"description": "We strictly adhere to high standards of quality, ensuring the safety and freshness of the products we deliver to your table."
+				},
+				"safety": {
+					"title": "Safety",
+					"description": "We manage every step to ensure the safety of our products, confirming the reliability and quality of our products."
+				}
+			}
+		},
+		"Products": {
+			"title": "Safety, Nutrition, and Health. At Aq-Dala Agro, we believe in the humane raising of our chickens to ensure their safety, nutrition, and overall health.",
+			"description": "On our website, you can learn more about our production process, explore our product range, and see how we care for every stage—from raising poultry to delivering fresh and tasty meat to your table.",
+			"button": "Learn More About Our Products"
+		},
+		"Blogs": {
+			"mini-title": "Our Latest Blog Posts",
+			"title": "Welcome to our information portal! Here you will find links to the latest and most interesting news about the company 'Aq-Dala Agro.'",
+			"description": "Explore posts that tell you about our company, our achievements, and innovations. Learn more about the expeditions and tours conducted at our facilities, and immerse yourself in captivating stories about our journey to success. We always strive to share important events and accomplishments with you so that you can better understand our mission and values.",
+			"button": "View All Blog Posts"
+		}
+	},
+	"Footer": {
+		"address": "Address",
+		"full-address": "Akmola Region, Arshalynsky District, Zhaltyrkol Village, Industrial Complex, Building 5",
+		"email": "Email",
+		"phone-number": "Phone number"
 	}
 }

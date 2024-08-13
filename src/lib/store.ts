@@ -6,10 +6,10 @@ interface NavbarState {
 	closeNav: () => void
 }
 
-const useNavbarStore = create<NavbarState>((set) => ({
+const useNavbarStore = create<NavbarState>(set => ({
 	isNavOpen: false,
-	toggleNav: () => set((state) => ({ isNavOpen: !state.isNavOpen })),
-	closeNav: () => set(() => ({ isNavOpen: false }))
+	toggleNav: () => set(state => ({ isNavOpen: !state.isNavOpen })),
+	closeNav: () => set(() => ({ isNavOpen: false })),
 }))
 
 export default useNavbarStore

@@ -2,7 +2,10 @@ import InfoCardMobile from '@/app/[locale]/about-us/_mobile/InfoCardMobile'
 
 const InfoMobile = () => {
 	return (
-		<div className='lg:hidden bg-white rounded-3xl space-y-12 py-6 md:py-16 px-6 mt-16'>
+		<div
+			data-aos='zoom-in'
+			className='lg:hidden bg-white rounded-3xl space-y-12 py-6 md:py-16 px-6 mt-16'
+		>
 			<div className='space-y-16'>
 				<h3 className='md:hidden max-w-2xl'>
 					Нам важно удовлетворения

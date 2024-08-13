@@ -3,7 +3,7 @@ import InfrastructureCard from '@/app/[locale]/about-us/InfrastructureCard'
 
 const InfrastructureMobile = () => {
 	return (
-		<div className='lg:hidden text-center space-y-12 mt-16'>
+		<div data-aos='zoom-in' className='lg:hidden text-center space-y-12 mt-16'>
 			<div className='space-y-6'>
 				<div className='space-y-1'>
 					<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1 mx-auto'>

@@ -1,6 +1,9 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 const Footer = () => {
+	const t = useTranslations('Footer')
+
 	return (
 		<footer className='bg-white rounded-2xl flex flex-col md:items-center md:text-center p-10 space-y-5 md:w-[648px] lg:w-[1112px] mx-auto'>
 			<div className='space-y-8 flex flex-col items-center'>
@@ -12,20 +15,17 @@ const Footer = () => {
 				/>
 				<div className='space-y-4'>
 					<div className='space-y-0'>
-						<p className='p3 text-neutral-dark'>Адрес</p>
-						<p className='p2-m max-w-sm'>
-							Акмолинская область, Аршалынский район, Село Жалтырколь, Массив
-							Производственный комплекс, здание 5
-						</p>
+						<p className='p3 text-neutral-dark'>{t('address')}</p>
+						<p className='p2-m max-w-sm'>{t('full-address')}</p>
 					</div>
 					<div className='space-y-0'>
-						<p className='p3 text-neutral-dark'>Электронная почта</p>
+						<p className='p3 text-neutral-dark'>{t('email')}</p>
 						<p className='p2-m'>aq-dala@mail.ru</p>
 					</div>
 				</div>
 			</div>
 			<div className='space-y-0'>
-				<p className='p3 text-neutral-dark'>Номер телефона</p>
+				<p className='p3 text-neutral-dark'>{t('phone-number')}</p>
 				<p className='p2-m'>+7 700 729 1457</p>
 			</div>
 			<div className='md:hidden flex space-x-2'>

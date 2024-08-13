@@ -7,15 +7,15 @@ import BlogsMobile from '@/app/[locale]/blogs/_mobile/BlogsMobile'
 import Products from '@/app/[locale]/products/Products'
 import ProductsMobile from '@/app/[locale]/products/_mobile/ProductsMobile'
 
-const Home = () => {
+const Home = ({ params: { locale } }: { params: { locale: string } }) => {
 	return (
 		<main className='w-[344px] md:w-[548px] lg:w-[1112px] mx-auto'>
 			<Hero />
 			<HeroMobile />
 			<AboutUs />
 			<AboutUsMobile />
-			<Products />
-			<ProductsMobile />
+			<Products locale={locale} />
+			<ProductsMobile locale={locale} />
 			<Blogs />
 			<BlogsMobile />
 		</main>
