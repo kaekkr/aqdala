@@ -50,7 +50,7 @@ const Blogs2 = async () => {
 					</div>
 				</div>
 			</div>
-			<div className='grid grid-rows-3 grid-cols-3 gap-y-5 mt-5'>
+			<div className='grid grid-rows-2 grid-cols-3 gap-y-5 mt-5'>
 				{blogs.map(blog => (
 					<BlogCard
 						key={blog._id}

@@ -49,7 +49,7 @@ const Blogs2Mobile = async () => {
 				</div>
 			</div>
 			<div className='mt-8 space-y-4'>
-				{blogs.slice(0, 3).map(blog => (
+				{blogs.slice(0, 4).map(blog => (
 					<BlogCard
 						key={blog._id}
 						title={blog.title}
