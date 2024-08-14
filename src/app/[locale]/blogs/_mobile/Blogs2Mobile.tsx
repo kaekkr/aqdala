@@ -1,5 +1,6 @@
 import BlogCard from '@/app/[locale]/blogs/BlogCard'
 import type { Blog } from '@/lib/types'
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 
 const getBlogs = async () => {
@@ -12,26 +13,27 @@ const getBlogs = async () => {
 	return res.json()
 }
 
-const Blogs2Mobile = async () => {
+const Blogs2Mobile = async ({ locale }: { locale: string }) => {
 	const blogs: Blog[] = await getBlogs()
+	const t = await getTranslations('Blogs')
+	const localeKey = `title-${locale}`
+	const title = t('title')
+	const title1 = title.slice(0, 46)
+	const title2 = title.slice(46, 108)
+	const title3 = title.slice(108, title.length)
 
 	return (
 		<div data-aos='zoom-in' className='lg:hidden'>
 			<div className='bg-white rounded-2xl px-6 py-16 space-y-5 md:space-y-12'>
 				<div className='space-y-2'>
-					<h2 className='max-w-2xl'>
-						Добро пожаловать на наш информационный портал!
-					</h2>
+					<h2 className='max-w-2xl'>{title1}</h2>
 					<h2 className='max-w-md'>
-						Здесь вы найдете ссылки на самые свежие и интересные новости
-						<span className='text-orange-500'> о компании “Ак-Дала Агро”.</span>
+						{title2}
+						<span className='text-orange-500'> {title3}</span>
 					</h2>
 				</div>
 				<p className='p1-l text-neutral-dark max-w-[17.5rem] md:max-w-lg'>
-					На сайте вы сможете узнать больше о нашем производственном процессе,
-					ознакомиться с ассортиментом продукции и увидеть, как мы заботимся о
-					каждом этапе – от выращивания птицы до доставки свежего и вкусного
-					мяса на ваш стол.
+					{t('description')}
 				</p>
 				<div className='flex items-center'>
 					<Image
@@ -40,11 +42,9 @@ const Blogs2Mobile = async () => {
 						width={32}
 						height={32}
 					/>
-					<p className='md:hidden p3 text-neutral-dark'>
-						Прокрутите вниз, чтобы узнать больше
-					</p>
+					<p className='md:hidden p3 text-neutral-dark'>{t('scroll')}</p>
 					<p className='hidden md:block p2-s text-neutral-dark'>
-						Прокрутите вниз, чтобы узнать больше
+						{t('scroll')}
 					</p>
 				</div>
 			</div>
@@ -52,7 +52,7 @@ const Blogs2Mobile = async () => {
 				{blogs.slice(0, 4).map(blog => (
 					<BlogCard
 						key={blog._id}
-						title={blog.title}
+						title={blog[localeKey]}
 						description={blog.description}
 						img={blog.img}
 						slug={blog.slug}

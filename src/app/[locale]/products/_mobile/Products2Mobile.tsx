@@ -1,5 +1,6 @@
 import ProductCard2 from '@/app/[locale]/products/ProductCard2'
 import type { Product } from '@/lib/types'
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 
 const getProducts = async () => {
@@ -14,24 +15,23 @@ const getProducts = async () => {
 	return res.json()
 }
 
-const Products2Mobile = async () => {
+const Products2Mobile = async ({ locale }: { locale: string }) => {
 	const products: Product[] = await getProducts()
+	const localeKey = `name-${locale}`
+	const t = await getTranslations('Products')
+	const title = t('title')
+	const title1 = title.slice(0, 33)
+	const title2 = title.slice(33, title.length)
 
 	return (
 		<div data-aos='zoom-in' className='lg:hidden'>
 			<div className='bg-white rounded-2xl py-16 px-6 space-y-12'>
 				<h2 className='max-w-2xl'>
-					<span className='text-orange-500'>
-						Безопасность, питание и здоровье.{' '}
-					</span>
-					В Ак-Дала Агро, мы верим в гуманное выращивание наших кур, чтобы
-					обеспечить их безопасность, питание и общее здоровье.
+					<span className='text-orange-500'>{title1} </span>
+					{title2}
 				</h2>
 				<p className='p1-l text-neutral-dark max-w-[17.5rem] md:max-w-lg'>
-					На сайте вы сможете узнать больше о нашем производственном процессе,
-					ознакомиться с ассортиментом продукции и увидеть, как мы заботимся о
-					каждом этапе – от выращивания птицы до доставки свежего и вкусного
-					мяса на ваш стол.
+					{t('description')}
 				</p>
 				<div className='flex items-center space-x-2'>
 					<Image
@@ -40,11 +40,9 @@ const Products2Mobile = async () => {
 						width={32}
 						height={32}
 					/>
-					<p className='md:hidden p3 text-neutral-dark'>
-						Прокрутите вниз, чтобы узнать больше
-					</p>
+					<p className='md:hidden p3 text-neutral-dark'>{t('scroll')}</p>
 					<p className='hidden md:block p2-s text-neutral-dark'>
-						Прокрутите вниз, чтобы узнать больше
+						{t('scroll')}
 					</p>
 				</div>
 			</div>
@@ -52,7 +50,7 @@ const Products2Mobile = async () => {
 				{products.map(product => (
 					<ProductCard2
 						key={product._id}
-						name={product.name}
+						name={product[localeKey]}
 						description={product.description}
 						img={product.img}
 					/>

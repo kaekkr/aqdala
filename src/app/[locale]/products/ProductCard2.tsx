@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 interface IProductCard2 {
@@ -7,6 +8,7 @@ interface IProductCard2 {
 }
 
 const ProductCard = ({ name, description, img }: IProductCard2) => {
+	const t = useTranslations('Products')
 	return (
 		<div className='space-y-2 md:space-y-3 flex flex-col items-center text-center'>
 			<Image
@@ -22,16 +24,13 @@ const ProductCard = ({ name, description, img }: IProductCard2) => {
 					{name}
 				</p>
 				<p className='md:hidden p3 text-neutral-dark max-w-[9rem] md:max-w-[19rem]'>
-					Кроме вышеуказанных товаров, в нашем ассортименте также представлены
-					другие продукты, произведенные нашим предприятием
+					{t('learn-more')}
 				</p>
 				<p className='hidden lg:block p2-m text-neutral-dark max-w-[9rem] md:max-w-[19rem]'>
-					Кроме вышеуказанных товаров, в нашем ассортименте также представлены
-					другие продукты, произведенные нашим предприятием
+					{t('learn-more')}
 				</p>
 				<p className='hidden md:block lg:hidden p2-s text-neutral-dark max-w-[9rem] md:max-w-[19rem]'>
-					Кроме вышеуказанных товаров, в нашем ассортименте также представлены
-					другие продукты, произведенные нашим предприятием
+					{t('learn-more')}
 				</p>
 			</div>
 		</div>

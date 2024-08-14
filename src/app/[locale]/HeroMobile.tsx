@@ -29,7 +29,7 @@ const HeroMobile = () => {
 					height={32}
 				/>
 				<p className='hidden md:block p2-s text-neutral-dark'>{t('scroll')}</p>
-				<p className='md:hidden p3 text-neutral-dark'>{t('Hero.scroll')}</p>
+				<p className='md:hidden p3 text-neutral-dark'>{t('scroll')}</p>
 			</div>
 		</div>
 	)

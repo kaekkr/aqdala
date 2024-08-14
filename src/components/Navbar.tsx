@@ -16,7 +16,7 @@ const Navbar = () => {
 					<Link href={`/${locale}/products`}>{t('our-products')}</Link>
 				</li>
 				<li className='font-medium'>
-					<Link href={`/${locale}/blogs'`}>{t('blogs')}</Link>
+					<Link href={`/${locale}/blogs`}>{t('blogs')}</Link>
 				</li>
 			</ul>
 		</nav>

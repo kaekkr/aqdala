@@ -7,7 +7,7 @@ export type Product = {
 
 export type Blog = {
 	_id: string
-	title: string
+	[key: string]: any
 	description: string
 	img: string
 	slug: string

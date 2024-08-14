@@ -93,6 +93,17 @@
 			}
 		}
 	},
+	"Products": {
+		"title": "Safety, Nutrition, and Health. At Aq-Dala Agro, we believe in the humane raising of our chickens to ensure their safety, nutrition, and overall health.",
+		"description": "On our website, you can learn more about our production process, explore our product range, and see how we care for every stage—from raising poultry to delivering fresh and tasty meat to your table.",
+		"scroll": "Scroll down to learn more",
+		"learn-more": "In addition to the above-mentioned products, we also offer other products manufactured by our company in our assortment"
+	},
+	"Blogs": {
+		"title": "Welcome to our information portal! Here you will find links to the latest and most interesting news about the company 'Aq-Dala Agro.'",
+		"description": "Explore posts that tell you about our company, our achievements, and innovations. Learn more about the expeditions and tours conducted at our facilities, and immerse yourself in captivating stories about our journey to success. We always strive to share important events and accomplishments with you so that you can better understand our mission and values.",
+		"scroll": "Scroll down to learn more"
+	},
 	"Footer": {
 		"address": "Address",
 		"full-address": "Akmola Region, Arshalynsky District, Zhaltyrkol Village, Industrial Complex, Building 5",
