@@ -4,9 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 
 const getBlogs = async () => {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/blogs`, {
-		cache: 'no-cache',
-	})
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/blogs`)
 
 	if (!res.ok) {
 		throw new Error('Error while getting list of blogs')
