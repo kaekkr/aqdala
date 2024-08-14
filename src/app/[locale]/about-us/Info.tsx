@@ -1,6 +1,12 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 const Info = () => {
+	const t = useTranslations('About-us.Info')
+	const title = t('title')
+	const title1 = title.slice(0, 24)
+	const title2 = title.slice(24, title.length)
+
 	return (
 		<div
 			data-aos='zoom-in'
@@ -8,36 +14,24 @@ const Info = () => {
 		>
 			<div className='space-y-16'>
 				<h1 className='max-w-[45rem]'>
-					Нам важно удовлетворения
-					<span className='text-orange-500'>
-						{' '}
-						потребностей клиентов и поддержании конкурентоспособности на рынке
-					</span>
+					{title1}
+					<span className='text-orange-500'> {title2}</span>
 				</h1>
 				<div className='flex space-x-12'>
 					<p className='p1-l text-neutral-dark max-w-[29rem]'>
-						На сайте вы сможете узнать больше о нашем производственном процессе,
-						ознакомиться с ассортиментом продукции и увидеть, как мы заботимся о
-						каждом этапе – от выращивания птицы до доставки свежего и вкусного
-						мяса на ваш стол.
+						{t('description')}
 					</p>
 					<div className='grid grid-cols-2 grid-rows-2 gap-y-12 gap-x-4'>
 						<p className='d1'>{'>'}10000</p>
-						<p className='p2-m text-neutral-dark'>
-							2022 году мощность нашей птицефабрики составила 10 тысяч тонн
-							куриного мяса
-						</p>
+						<p className='p2-m text-neutral-dark'>{t('description2')}</p>
 						<p className='d1'>{'>'}22000</p>
-						<p className='p2-m text-neutral-dark'>
-							2023 году мы достигли новых высот, превысив показатель в 22 тысячи
-							тонн
-						</p>
+						<p className='p2-m text-neutral-dark'>{t('description3')}</p>
 					</div>
 				</div>
 			</div>
 			<hr className='border-black' />
 			<div className='space-y-16'>
-				<h1>Амбициозные цели до 2027 года</h1>
+				<h1>{t('title2')}</h1>
 				<div className='flex space-x-4'>
 					<div className='flex space-x-8 rounded-3xl shadow p-6 w-[508px]'>
 						<Image
@@ -48,12 +42,10 @@ const Info = () => {
 						/>
 						<div className='space-y-6'>
 							<p className='p2-m-medium'>
-								Удовлетворение потребностей клиентов
+								{t('cards.customer-satisfaction.title')}
 							</p>
 							<p className='p2-m text-neutral-dark max-w-sm'>
-								Повышение объема производства направлено на удержание и
-								увеличение доли рынка, удовлетворение растущего спроса и
-								укрепление позиций компании среди конкурентов
+								{t('cards.customer-satisfaction.description')}
 							</p>
 						</div>
 					</div>
@@ -66,12 +58,10 @@ const Info = () => {
 						/>
 						<div className='space-y-6'>
 							<p className='p2-m-medium'>
-								Удовлетворение потребностей клиентов
+								{t('cards.production-expansion.title')}
 							</p>
 							<p className='p2-m text-neutral-dark max-w-sm'>
-								Повышение объема производства направлено на удержание и
-								увеличение доли рынка, удовлетворение растущего спроса и
-								укрепление позиций компании среди конкурентов
+								{t('cards.production-expansion.description')}
 							</p>
 						</div>
 					</div>

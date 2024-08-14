@@ -1,24 +1,26 @@
+import { useTranslations } from 'next-intl'
+
 const AboutUsHero = () => {
+	const t = useTranslations('About-us.Hero')
+	const title = t('title')
+	const title1 = title.slice(0, 21)
+	const title2 = title.slice(21, title.length)
+
 	return (
 		<div
 			data-aos='zoom-in'
 			className='hidden lg:block bg-white text-center rounded-3xl p-10'
 		>
 			<p className='p3 bg-green/20 inline rounded-2xl px-2 py-1 mx-auto'>
-				Немножко о нас
+				{t('mini-title')}
 			</p>
 			<div className='space-y-4'>
 				<h1 className='max-w-[43rem] mx-auto'>
-					<span className='text-orange-500'>
-						Компания Ак-Дала Агро была основана в 2015 году{' '}
-					</span>
-					и находится всего в 30 километрах от столицы Казахстана
+					<span className='text-orange-500'>{title1} </span>
+					{title2}
 				</h1>
 				<p className='p2-m text-neutral-dark max-w-[34rem] mx-auto'>
-					Ак-Дала Агро – это не только высококачественная продукция, но и вклад
-					в развитие региона и поддержку местных жителей. Мы стремимся к
-					постоянному росту и улучшению, чтобы предложить вам лучшее куриное
-					мясо под брендом Аршалы Кус.
+					{t('description')}
 				</p>
 			</div>
 			<div className='flex items-center justify-center space-x-8'>
@@ -26,8 +28,7 @@ const AboutUsHero = () => {
 				<div className='flex space-x-4'>
 					<p className='d1'>{'>'}150</p>
 					<p className='p2-m text-neutral-dark max-w-[18rem] text-left'>
-						За время своего существования мы смогли трудоустроить 150 жителей
-						Аршалинского района.
+						{t('description2')}
 					</p>
 				</div>
 				<div className='bg-neutral-light rounded-2xl rounded-tl-[120px] w-[270px] h-[261px]'></div>

@@ -41,6 +41,58 @@
 			"button": "View All Blog Posts"
 		}
 	},
+	"About-us": {
+		"Hero": {
+			"mini-title": "About Us",
+			"title": "Aq-Dala Agro was founded in 2015 and is located just 30 kilometers from the capital of Kazakhstan.",
+			"description": "Aq-Dala Agro is not only about high-quality products but also about contributing to the development of the region and supporting local residents. We strive for constant growth and improvement to offer you the best chicken meat under the 'Arshaly Kus' brand.",
+			"description2": "Since our establishment, we have provided employment for 150 residents of the Arshalinsky district."
+		},
+		"Infrastructure": {
+			"mini-title": "Infrastructure",
+			"title": "We are a rapidly growing enterprise utilizing advanced technologies and high-quality standards.",
+			"description": "We take pride in the fact that all our facilities are equipped with cutting-edge technology from Italy, Belarus, and China, allowing us to maintain high production standards",
+			"cards": {
+				"modern-poultry-houses": {
+					"title": "Modern Poultry Houses",
+					"description": "These houses signify the use of advanced technologies and innovative solutions in poultry farming."
+				},
+				"incubator": {
+					"title": "Incubator",
+					"description": "A key element for maintaining and increasing the bird population, crucial for stable production."
+				},
+				"processing-plant": {
+					"title": "Processing Plant",
+					"description": "An essential element for completing the production cycle and obtaining the final product."
+				},
+				"broiler-rearing-facilities": {
+					"title": "Broiler Rearing Facilities",
+					"description": "These facilities allow for the efficient organization of the rearing process, impacting productivity and product quality."
+				},
+				"feed-mill": {
+					"title": "Feed Mill",
+					"description": "Ensures control over feed quality, directly affecting the health and productivity of the birds."
+				}
+			}
+		},
+		"Info": {
+			"title": "We prioritize meeting customer needs and maintaining competitiveness in the market",
+			"description": "On our website, you can learn more about our production process, explore our product range, and see how we care for every stage — from raising poultry to delivering fresh and tasty meat to your table",
+			"description2": "In 2022, our poultry farm's production capacity reached 10,000 tons of chicken meat",
+			"description3": "In 2023, we achieved new heights, surpassing 22,000 tons",
+			"title2": "Ambitious Goals by 2027",
+			"cards": {
+				"customer-satisfaction": {
+					"title": "Customer Satisfaction",
+					"description": "Increasing production volumes aims to retain and grow market share, meet rising demand, and strengthen the company’s position among competitors"
+				},
+				"production-expansion": {
+					"title": "Production Expansion",
+					"description": "We aim to increase the production and sale of meat products to 100,000 tons per year"
+				}
+			}
+		}
+	},
 	"Footer": {
 		"address": "Address",
 		"full-address": "Akmola Region, Arshalynsky District, Zhaltyrkol Village, Industrial Complex, Building 5",
