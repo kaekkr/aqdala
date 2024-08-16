@@ -8,7 +8,10 @@ const Hero = () => {
 	const title2 = title.slice(17, title.length)
 
 	return (
-		<div className='hidden bg-white rounded-2xl lg:flex justify-between items-center p-10 h-[595px]'>
+		<div
+			data-aos='zoom-in'
+			className='hidden bg-white rounded-2xl lg:flex justify-between items-center p-10 h-[595px]'
+		>
 			<div className="flex flex-col justify-between bg-[url('/home/lines.png')] h-full">
 				<div className='space-y-6'>
 					<h1 className='max-w-xl'>

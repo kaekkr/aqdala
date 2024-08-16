@@ -8,7 +8,10 @@ const HeroMobile = () => {
 	const title2 = title.slice(17, title.length)
 
 	return (
-		<div className='lg:hidden bg-white rounded-2xl flex flex-col px-[23px] py-6 md:p-6 md:space-y-6'>
+		<div
+			data-aos='zoom-in'
+			className='lg:hidden bg-white rounded-2xl flex flex-col px-[23px] py-6 md:p-6 md:space-y-6'
+		>
 			<div>
 				<div className='space-y-6'>
 					<h2 className='max-w-xl md:max-w-md'>

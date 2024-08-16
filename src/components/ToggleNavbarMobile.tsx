@@ -1,13 +1,14 @@
 'use client'
 
-import Image from 'next/image'
 import useNavbarStore from '@/lib/store'
+import Image from 'next/image'
+import ChangeLanguage from './ChangeLanguage'
 
 const ToggleNavbarMobile = () => {
 	const { isNavOpen, toggleNav } = useNavbarStore()
-	
+
 	return (
-		<>
+		<div className='flex space-x-4 items-center'>
 			{!isNavOpen && (
 				<Image
 					src='/icons/hamburger-icon.svg'
@@ -28,7 +29,8 @@ const ToggleNavbarMobile = () => {
 					onClick={toggleNav}
 				/>
 			)}
-		</>
+			<ChangeLanguage />
+		</div>
 	)
 }
 

@@ -1,7 +1,7 @@
-import Navbar from '@/components/Navbar'
 import ToggleNavbarMobile from '@/components/ToggleNavbarMobile'
 import Image from 'next/image'
 import Link from 'next/link'
+import Navbar from './Navbar'
 
 const Header = () => {
 	return (

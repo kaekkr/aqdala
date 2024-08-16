@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+	width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+	preserveAspectRatio="xMidYMid meet">
+
+	<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+		stroke="none">
+		<!-- White stripe -->
+		<rect width="5120" height="1707" y="0" fill="#D52B1E" />
+
+		<!-- Blue stripe -->
+		<rect width="5120" height="1707" y="1707" fill="#0033A0" />
+
+		<!-- Red stripe -->
+		<rect width="5120" height="1707" y="3414" fill="#FFFFFF" />
+	</g>
+</svg>
