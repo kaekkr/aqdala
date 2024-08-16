@@ -18,7 +18,7 @@ const aboutUsCardData = [
 	},
 ]
 
-const AboutUsMobile = () => {
+const AboutUsMobile = ({ locale }: { locale: string }) => {
 	const t = useTranslations('Home.About-us')
 	const title = t('title')
 	const title1 = title.slice(0, 17)
@@ -42,7 +42,7 @@ const AboutUsMobile = () => {
 					{t('description')}
 				</p>
 				<Link
-					href='/about-us'
+					href={`/${locale}/about-us`}
 					className='inline-flex items-center bg-white rounded-full px-3 py-3 space-x-2'
 				>
 					<p className='p2-s-medium'>{t('button')}</p>

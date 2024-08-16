@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const AboutUs = () => {
+const AboutUs = ({ locale }: { locale: string }) => {
 	const t = useTranslations('Home.About-us')
 	const title = t('title')
 	const title1 = title.slice(0, 17)
@@ -25,7 +25,7 @@ const AboutUs = () => {
 				</div>
 				<p className='p1-l text-neutral-dark max-w-xl'>{t('description')}</p>
 				<Link
-					href='/about-us'
+					href={`/${locale}/about-us`}
 					className='inline-flex items-center bg-white rounded-full px-4 py-[17px] space-x-2'
 				>
 					<p className='p2-s-medium'>{t('button')}</p>

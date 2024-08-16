@@ -12,8 +12,8 @@ const Home = ({ params: { locale } }: { params: { locale: string } }) => {
 		<main className='w-[344px] md:w-[548px] lg:w-[1112px] mx-auto'>
 			<Hero />
 			<HeroMobile />
-			<AboutUs />
-			<AboutUsMobile />
+			<AboutUs locale={locale} />
+			<AboutUsMobile locale={locale} />
 			<Products locale={locale} />
 			<ProductsMobile locale={locale} />
 			<Blogs />
