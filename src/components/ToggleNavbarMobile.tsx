@@ -8,7 +8,7 @@ const ToggleNavbarMobile = () => {
 	const { isNavOpen, toggleNav } = useNavbarStore()
 
 	return (
-		<div className='flex space-x-4 items-center'>
+		<div className='md:hidden flex space-x-4 items-center'>
 			{!isNavOpen && (
 				<Image
 					src='/icons/hamburger-icon.svg'
