@@ -2,21 +2,7 @@ import AboutUsCard from '@/app/[locale]/about-us/AboutUsCard'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-
-const aboutUsCardData = [
-	{
-		name: 'advanced-technologies',
-		img: '/home/circles-1.svg',
-	},
-	{
-		name: 'high-quality-standards',
-		img: '/home/circles-2.svg',
-	},
-	{
-		name: 'safety',
-		img: '/home/circles-3.svg',
-	},
-]
+import { aboutUsCardData } from '../AboutUsSection'
 
 const AboutUsMobile = ({ locale }: { locale: string }) => {
 	const t = useTranslations('Home.About-us')
@@ -58,8 +44,8 @@ const AboutUsMobile = ({ locale }: { locale: string }) => {
 				{aboutUsCardData.map((card, i) => (
 					<AboutUsCard
 						key={i}
-						title={t(`${card.name}.title`)}
-						description={t(`${card.name}.description`)}
+						title={t(`cards.${card.name}.title`)}
+						description={t(`cards.${card.name}.description`)}
 						img={card.img}
 						index={i}
 					/>

@@ -14,7 +14,7 @@ const getBlogs = async () => {
 	return res.json()
 }
 
-const BlogsMobile = async () => {
+const BlogsMobile = async ({ locale }: { locale: string }) => {
 	const blogs: Blog[] = await getBlogs()
 	const t = await getTranslations('Home.Blogs')
 	const title = t('title')
@@ -43,7 +43,7 @@ const BlogsMobile = async () => {
 					</p>
 				</div>
 				<Link
-					href='/blogs'
+					href={`/${locale}/blogs`}
 					className='inline-flex border border-black rounded-full items-center px-3 py-3 space-x-2 mt-28'
 				>
 					<p className='p2-s-medium'>{t('button')}</p>

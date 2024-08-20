@@ -1,7 +1,7 @@
 import AboutUsCard from '@/app/[locale]/about-us/AboutUsCard'
 import { useTranslations } from 'next-intl'
 
-const aboutUsCardData = [
+export const aboutUsCardData = [
 	{
 		name: 'advanced-technologies',
 		img: '/home/circles-1.svg',

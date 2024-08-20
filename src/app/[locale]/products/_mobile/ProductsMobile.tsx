@@ -48,7 +48,7 @@ const ProductsMobile = async ({ locale }: { locale: string }) => {
 					</p>
 				</div>
 				<Link
-					href='/products'
+					href={`/${locale}/products`}
 					className='inline-flex border border-black rounded-full items-center px-3 py-3 space-x-2 mt-28'
 				>
 					<p className='p2-s-medium'>{t('button')}</p>

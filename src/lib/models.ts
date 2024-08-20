@@ -2,44 +2,53 @@ import mongoose from 'mongoose'
 
 const productSchema = new mongoose.Schema(
 	{
-		name: {
+		'name-en': {
 			type: String,
-			required: true
+			required: true,
+		},
+		'name-ru': {
+			type: String,
+			required: true,
 		},
 		description: {
 			type: String,
-			required: true
+			required: true,
 		},
 		img: {
 			type: String,
-			required: true
-		}
+			required: true,
+		},
 	},
 	{ timestamps: true }
 )
 
 const blogSchema = new mongoose.Schema(
 	{
-		title: {
+		'title-en': {
 			type: String,
-			required: true
+			required: true,
+		},
+		'title-ru': {
+			type: String,
+			required: true,
 		},
 		description: {
 			type: String,
-			required: true
+			required: true,
 		},
 		img: {
 			type: String,
-			required: true
+			required: true,
 		},
 		slug: {
 			type: String,
 			required: true,
-			unique: true
-		}
+			unique: true,
+		},
 	},
 	{ timestamps: true }
 )
 
-export const Product = mongoose.models?.Product || mongoose.model('Product', productSchema)
+export const Product =
+	mongoose.models?.Product || mongoose.model('Product', productSchema)
 export const Blog = mongoose.models?.Blog || mongoose.model('Blog', blogSchema)

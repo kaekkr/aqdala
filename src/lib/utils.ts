@@ -1,7 +1,7 @@
-import mongoose, { Connection, ConnectOptions } from 'mongoose'
+import mongoose from 'mongoose'
 
 interface ConnectionType {
-	isConnected?: number;
+	isConnected?: number
 }
 
 const connection: ConnectionType = {}
@@ -12,10 +12,11 @@ export const connectToDb = async (): Promise<void> => {
 			console.log('Using existing connection')
 			return
 		}
-		
+
 		const db = await mongoose.connect(process.env.MONGO_URL as string)
-		
+
 		connection.isConnected = db.connections[0].readyState
+		// connection.isConnected = 1
 	} catch (error) {
 		console.log(error)
 		throw new Error(error as string)

@@ -16,8 +16,8 @@ const Home = ({ params: { locale } }: { params: { locale: string } }) => {
 			<AboutUsMobile locale={locale} />
 			<Products locale={locale} />
 			<ProductsMobile locale={locale} />
-			<Blogs />
-			<BlogsMobile />
+			<Blogs locale={locale} />
+			<BlogsMobile locale={locale} />
 		</main>
 	)
 }
